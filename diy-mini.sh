@@ -8,6 +8,10 @@
 
 # TTYD 免登录
 # sed -i 's|/bin/login|/bin/login -f root|g' feeds/packages/utils/ttyd/files/ttyd.config
+#sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
+
+# Add a feed source
+echo 'src-git hxzn https://github.com/h70076000/hxzn-package' >>feeds.conf.default
 
 # 移除要替换的包
 rm -rf feeds/packages/net/mosdns
